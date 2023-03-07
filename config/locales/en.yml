@@ -77,3 +77,8 @@ en:
     new: 
       title: Signup
       signup_page_description: This will be a signup page for new users.
+    show: 
+      title: User profile
+  
+  flash: 
+    sign_up_success: Welcome to the Sample App!
