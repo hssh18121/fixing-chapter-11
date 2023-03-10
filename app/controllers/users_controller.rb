@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       flash[:success] = t("flash.sign_up_success")
       redirect_to @user
     else
-      render 'new'
+      render :new
     end
   end
 
