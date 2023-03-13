@@ -80,8 +80,16 @@ en:
     new: 
       title: Signup
       signup_page_description: This will be a signup page for new users.
+      create_account_button_text: Create my account
     show: 
       title: User profile
+    index:
+      title: All users
+    edit:
+      title: Edit user
+      change_ava_text: Change
+      edit_button_text: Save changes
+      update_profile_text: Update your profile
   
   flash: 
     sign_up_success: Welcome to the Sample App!
