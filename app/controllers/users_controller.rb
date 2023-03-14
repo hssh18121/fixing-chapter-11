@@ -8,22 +8,25 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 4)
+    @users = User.where(activated: FILL_IN).paginate(page: params[:page], per_page: 3)
   end
 
   def show
     user_id = params[:id]
     @user = User.find_by(id: user_id)
+    redirect_to root_url and return unless FILL_IN
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-    log_in @user
-    flash[:success] = "Welcome to the Sample App!"
-    redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+
+
     else
-    render :new
+      render :new
     end
   end
 
@@ -32,14 +35,12 @@ class UsersController < ApplicationController
   end
 
   def update 
-    def update
       @user = User.find(params[:id])
       if @user.update_attributes(user_params)
         flash[:success] = "Profile updated"
         redirect_to @user
       else
-      render :edit
-      end
+        render :edit
       end
   end
 
