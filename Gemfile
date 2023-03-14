@@ -11,6 +11,7 @@ gem "config"
 gem 'will_paginate','3.1.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'jquery-rails', '4.1.1'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
