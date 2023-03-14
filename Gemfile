@@ -8,6 +8,8 @@ gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
 gem 'bcrypt', '3.1.16'
 gem 'bootstrap-sass', '3.3.6'
 gem "config"
+gem 'will_paginate','3.1.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'jquery-rails', '4.1.1'
 
 # Use sqlite3 as the database for Active Record
