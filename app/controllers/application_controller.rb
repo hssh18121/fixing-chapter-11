@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
     before_action :set_locale
-    before_action :logged_in_user, only: [:edit, :update]
-    before_action :correct_user, only: [:edit, :update]
+
 
     def set_locale
         I18n.locale = params[:locale] || I18n.default_locale
